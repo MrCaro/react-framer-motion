@@ -1,0 +1,85 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body,
+#root,
+main,
+section {
+    background-color: rgb(245, 245, 245);
+    color: black;
+    height: 100vh;
+    width: 100%;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+.container {
+    margin: auto 5rem;
+    height: 100%;
+}
+
+.cars-wrapper {
+    height: inherit;
+    display: flex;
+    gap: 5rem;
+    justify-content: left;
+    align-items: center;
+}
+
+.single-car {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 0 30%;
+
+    div {
+        overflow: hidden;
+    }
+}
+
+.car-banner-wrapper {
+    position: relative;
+    margin: 3rem -5rem;
+    height: 20%;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100vw;
+    }
+}
+
+.car-info-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+
+    p, 
+    img {
+        flex: 1 1 50%;
+        gap: 2rem;
+    }
+}
+
+footer {
+    padding: 3rem 0;
+}
+
+@media screen and (max-width: 800px) {
+    .car-info-wrapper {
+        p, 
+        img {
+            flex: 1 1 100%
+        }
+    }
+}
